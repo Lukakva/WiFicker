@@ -8,7 +8,7 @@
 
 #import "Patternator.h"
 
-@implementation Paternattor
+@implementation Patternator
 
 // function which increases indexed element in array (which is an int) by 1
 // and if it is higher than the MAX value, it increases next slot (just like counting)
