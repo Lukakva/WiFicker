@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB33502A1B739C9A00889093 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3350291B739C9A00889093 /* main.m */; };
+		EB33502A1B739C9A00889093 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3350291B739C9A00889093 /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EBAA2EBC1C3EEAEA00FB60B0 /* Patternator.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAA2EBB1C3EEAEA00FB60B0 /* Patternator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		EB3350261B739C9A00889093 /* WiFi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WiFi; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB3350291B739C9A00889093 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EBAA2EBA1C3EEAEA00FB60B0 /* Patternator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Patternator.h; path = ../Patternator.h; sourceTree = "<group>"; };
+		EBAA2EBB1C3EEAEA00FB60B0 /* Patternator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Patternator.m; path = ../Patternator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,8 @@
 		EB3350281B739C9A00889093 /* WiFi */ = {
 			isa = PBXGroup;
 			children = (
+				EBAA2EBA1C3EEAEA00FB60B0 /* Patternator.h */,
+				EBAA2EBB1C3EEAEA00FB60B0 /* Patternator.m */,
 				EB3350291B739C9A00889093 /* main.m */,
 			);
 			path = WiFi;
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBAA2EBC1C3EEAEA00FB60B0 /* Patternator.m in Sources */,
 				EB33502A1B739C9A00889093 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +241,7 @@
 				EB33502F1B739C9A00889093 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
