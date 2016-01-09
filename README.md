@@ -19,9 +19,12 @@ Patternato is a class which I wrote for this project, but you might find it usef
 #import "Patternator.h"
 // some code
 NSArray *chars = @[@"a", @"b", @"c", @"d", @"e"];
-[Patternator generatePatternsFromArray:chars length:2 action:^(NSString *string) {
+[Patternator generatePatternsFromArray:chars length:2 action:^(NSString *string, BOOL *shouldContinue) {
     NSLog(@"%@", string);
     string = nil; // it's better for memory reasons to unset the reference
+
+    // if this current string is correct and you don't want the process to continue
+    *shouldContinue = NO;
 }];
 ```
 

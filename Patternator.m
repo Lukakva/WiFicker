@@ -38,7 +38,7 @@
     }
 }
 
-+ (void)generatePatternsFromArray:(NSArray *)array length:(int)length action:(void (^)(NSString *string))action {
++ (void)generatePatternsFromArray:(NSArray *)array length:(int)length action:(void (^)(NSString *string, BOOL *shouldContinue))action {
     // logic of this function
     // we have an array called pattersnWithNumber
     // at the beginning it's array of specific length (specified by length argument)
@@ -71,11 +71,15 @@
             int characterIndex = [[patternsWithNumber objectAtIndex:k] intValue];
             permutation = [permutation stringByAppendingString:[array objectAtIndex:characterIndex]];
         }
+        
+        BOOL shouldContinueBool = YES;
 
         // call the action function with permutation string
-        action(permutation);
+        action(permutation, &shouldContinueBool);
         // unset the reference to permutation string
         permutation = nil;
+        
+        if (!shouldContinueBool) break;
         
         // increase the value of pattersnWithNumber
         [self increaseIndex:patternsWithNumber index:patternsWithNumber.count - 1 max:array.count - 1];

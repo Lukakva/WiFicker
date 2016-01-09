@@ -12,7 +12,7 @@
 
 // array cntains strings which will be permutated
 // action parameter will be called for every permutation
-+ (void)generatePatternsFromArray:(NSArray *)array length:(int)length action:(void (^)(NSString *string))action;
++ (void)generatePatternsFromArray:(NSArray *)array length:(int)length action:(void (^)(NSString *string, BOOL *shouldContinue))action;
 
 
 @end
